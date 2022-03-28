@@ -5,7 +5,7 @@ export default function App() {
   const [outputText, setOutputText] = useState("First React Native App!");
   return (
     <View style={styles.container}>
-      <Text>Hello World!</Text>
+      <Text style={styles.text}>Hello World!</Text>
       <Button title="New Button!" />
     </View>
   );
@@ -17,5 +17,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  text: {
+    color: "red",
   },
 });
