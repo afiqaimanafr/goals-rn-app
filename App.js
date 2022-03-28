@@ -1,28 +1,23 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, Text, View, Button, TextInput } from "react-native";
 
 export default function App() {
   const [outputText, setOutputText] = useState("First React Native App!");
   return (
-    <View style={styles.container}>
-      <Text style={styles.dummyText}>Hello World!</Text>
-      <Button title="New Button!" />
+    <View style={styles.appContainer}>
+      <View>
+        <TextInput placeholder="Your course goal!" />
+        <Button title="Add Goal" />
+      </View>
+      <View>
+        <Text>List of goals...</Text>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  dummyText: {
-    color: "red",
-    margin: 16,
-    borderWidth: 2,
-    borderColor: "red",
-    padding: 16,
+  appContainer: {
+    padding: 50,
   },
 });
