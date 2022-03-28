@@ -5,8 +5,8 @@ export default function App() {
   const [outputText, setOutputText] = useState("First React Native App!");
   return (
     <View style={styles.appContainer}>
-      <View>
-        <TextInput placeholder="Your course goal!" />
+      <View style={styles.inputContainer}>
+        <TextInput style={styles.textInput} placeholder="Your course goal!" />
         <Button title="Add Goal" />
       </View>
       <View>
@@ -19,5 +19,16 @@ export default function App() {
 const styles = StyleSheet.create({
   appContainer: {
     padding: 50,
+  },
+  inputContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  textInput: {
+    borderWidth: 1,
+    borderColor: "#cccccc",
+    width: "80%",
+    marginRight: 8,
+    padding: 8,
   },
 });
