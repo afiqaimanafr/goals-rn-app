@@ -3,7 +3,12 @@ import { StyleSheet, Text, View, Button } from "react-native";
 
 export default function App() {
   const [outputText, setOutputText] = useState("First React Native App!");
-  return <View style={styles.container}>Hello World!</View>;
+  return (
+    <View style={styles.container}>
+      <Text>Hello World!</Text>
+      <Button title="New Button!" />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
