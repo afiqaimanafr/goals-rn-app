@@ -13,8 +13,12 @@ export default function App() {
     ]);
   }
 
-  function deleteGoalHandler() {
-    console.log("Deleted!");
+  function deleteGoalHandler(id) {
+    setCourseGoals((currentCourseGoals) => {
+      return currentCourseGoals.filter((goal) => {
+        goal.id !== id;
+      });
+    });
   }
 
   return (
